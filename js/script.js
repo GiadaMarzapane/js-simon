@@ -1,4 +1,5 @@
 const numberToGuess = [];
+const successfullNumbers = [];
 
 for (let index = 1; index <= 5; index++) {
     
@@ -15,14 +16,12 @@ for (let index = 1; index <= 5; index++) {
 console.log(numberToGuess);
 /* -------------------------------------------------- */ 
 
-setTimeout(hidden, mySeconds(5));
-setTimeout(createPrompt, mySeconds(7));
+setTimeout(hidden, mySeconds(5)); //da sostituire con 30 secondi
+setTimeout(createPrompt, mySeconds(5)); //da sostituire con 30 secondi
 
 /*------------------ FUNCTIONS ------------------*/
-function generateRandomNumber (min, max) {
-    
-        return Math.ceil(Math.random() * (max - min)) + min;
-        
+function generateRandomNumber (min, max) {    
+        return Math.ceil(Math.random() * (max - min)) + min;        
 }
 
 function createMySpan (element){
@@ -50,19 +49,24 @@ function hidden () {
 function createPrompt () {
     for (let index = 1; index <= 5; index++) {
 
-        let guessNumbers = parseInt(prompt('Inerisci il ' + index + ' ° numero della sequenza'));
+        let guessNumbers = parseInt(prompt('Inserisci il ' + index + ' ° numero della sequenza'));
 
         while (isNaN(guessNumbers) == true){
             guessNumbers = parseInt(prompt('VALORE NON VALIDO, Inerisci il ' + index + ' ° numero della sequenza'));
         }
-        const spanMyNumbers = document.querySelector('#numeri-inseriti');
-        const mySpan = document.createElement('span');
-        mySpan.innerHTML = guessNumbers;
-        mySpan.classList.add('number');
-        spanMyNumbers.append(mySpan); 
+        if(numberToGuess[index -1]== guessNumbers){
+            const spanMyNumbers = document.querySelector('#numeri-inseriti');
+            const mySpan = document.createElement('span');
+            mySpan.innerHTML = guessNumbers;
+            mySpan.classList.add('number');
+            spanMyNumbers.append(mySpan);
 
-        // if(isNaN(guessNumbers) == false){
+            successfullNumbers.push(guessNumbers);
 
-        // }
+            const spanMyNumbersDue = document.querySelector('#numeri-indovinati > span');
+            spanMyNumbersDue.innerHTML = successfullNumbers.length;            
+        }
+
+        console.log(successfullNumbers, successfullNumbers.length);
     }
 }

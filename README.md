@@ -9,5 +9,5 @@ OK// 2- creare ciclo for per stampare in pagina 5 numeri generati random
 (pusharli in un array?)
 OK// 3- creare un timer di 30 secondi, dopo il quale i numeri inseriti scompaiono
 OK// 4- creare 5 prompt() in cui all'utente si deve chiedere di inserire i numeri appena scomparsi in ordine (?)
-5- stampare quanti e quali dei numeri da indovinare sono stati indovinati.
+OK// 5- stampare quanti e quali dei numeri da indovinare sono stati indovinati.
 <!-------------------FINE STEP---------------------------------->
