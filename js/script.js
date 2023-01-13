@@ -12,8 +12,10 @@ for (let index = 1; index <= 5; index++) {
     const addNumbers = createMySpan(myRandomNumbers);
     
 }
-
 console.log(numberToGuess);
+/* -------------------------------------------------- */ 
+
+setTimeout(hidden, mySeconds(5));
 
 
 /*------------------ FUNCTIONS ------------------*/
@@ -24,9 +26,20 @@ function generateRandomNumber (min, max) {
 }
 
 function createMySpan (element){
-    const myContainer = document.querySelector('div.container');
+    const divNumbers = document.querySelector('#numbers');
     const mySpan = document.createElement('span');
     mySpan.classList.add('number');
     mySpan.innerHTML = element;
-    myContainer.append(mySpan);
+    divNumbers.append(mySpan);
+}
+
+function mySeconds(seconds) {
+    return seconds * 1000;    
+}
+
+function hidden () {
+    alert('I numeri sono scomparsi')
+    const myContainer = document.querySelector('div.container.flex');
+    myContainer.classList.remove('flex');
+    myContainer.classList.add('hidden');
 }
