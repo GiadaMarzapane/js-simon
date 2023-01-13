@@ -63,7 +63,7 @@ function createPrompt () {
 
             successfullNumbers.push(guessNumbers);
 
-            const spanMyNumbersDue = document.querySelector('#numeri-indovinati > span');
+            const spanMyNumbersDue = document.querySelector('#numeri-indovinati > h4');
             spanMyNumbersDue.innerHTML = successfullNumbers.length;            
         }
 
