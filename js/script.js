@@ -16,8 +16,8 @@ for (let index = 1; index <= 5; index++) {
 console.log(numberToGuess);
 /* -------------------------------------------------- */ 
 
-setTimeout(hidden, mySeconds(5)); //da sostituire con 30 secondi
-setTimeout(createPrompt, mySeconds(5)); //da sostituire con 30 secondi
+setTimeout(hidden, mySeconds(30)); //da sostituire con 30 secondi
+setTimeout(createPrompt, mySeconds(30)); //da sostituire con 30 secondi
 
 /*------------------ FUNCTIONS ------------------*/
 function generateRandomNumber (min, max) {    
@@ -37,7 +37,7 @@ function mySeconds(seconds) {
 }
 
 function hidden () {
-    alert('I numeri sono scomparsi')
+    // alert('I numeri sono scomparsi')
     const myContainer = document.querySelector('div.container.flex');
     const divMyNumbers = document.querySelector('div.container.hidden');
     myContainer.classList.remove('flex');
