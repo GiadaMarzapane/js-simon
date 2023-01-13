@@ -17,7 +17,7 @@ console.log(numberToGuess);
 /* -------------------------------------------------- */ 
 
 setTimeout(hidden, mySeconds(30)); //da sostituire con 30 secondi
-setTimeout(createPrompt, mySeconds(30)); //da sostituire con 30 secondi
+setTimeout(createPrompt, mySeconds(31)); //da sostituire con 30 secondi
 
 /*------------------ FUNCTIONS ------------------*/
 function generateRandomNumber (min, max) {    
@@ -63,7 +63,7 @@ function createPrompt () {
 
             successfullNumbers.push(guessNumbers);
 
-            const spanMyNumbersDue = document.querySelector('#numeri-indovinati > h4');
+            const spanMyNumbersDue = document.querySelector('#numeri-indovinati > span');
             spanMyNumbersDue.innerHTML = successfullNumbers.length;            
         }
 
