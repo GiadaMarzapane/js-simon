@@ -17,7 +17,7 @@ console.log(numberToGuess);
 /* -------------------------------------------------- */ 
 
 setTimeout(hidden, mySeconds(5)); //da sostituire con 30 secondi
-setTimeout(createPrompt, mySeconds(6)); //da sostituire con 30 secondi
+setTimeout(createPrompt, mySeconds(5.5)); //da sostituire con 30 secondi
 
 /*------------------ FUNCTIONS ------------------*/
 function generateRandomNumber (min, max) {    
@@ -67,7 +67,7 @@ function createPrompt () {
         }
         const myMessage = document.getElementById('message');
 
-        if ((successfullNumbers.length = 0) || (successfullNumbers.length <= 2)){
+        if (successfullNumbers.length <= 2){
             myMessage.classList.add('red');
             myMessage.innerHTML = 'Ops... Forse devi aggiungere del fosforo alla tua dieta!'                
         }
